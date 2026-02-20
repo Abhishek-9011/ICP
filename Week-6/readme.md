@@ -4,18 +4,24 @@ Approach: First we do a dfs preorder then when we reach leaf node we check if it
 
 code:
 class Solution {
-public TreeNode removeLeafNodes(TreeNode root, int target) {
-if(root!=null){
-root.left = removeLeafNodes(root.left,target);
-root.right = removeLeafNodes(root.right,target);
-if(root.val==target && root.left==null && root.right==null){
-return null;
+
+    public TreeNode removeLeafNodes(TreeNode root, int target) {
+    if(root!=null){
+        root.left = removeLeafNodes(root.left,target);
+        root.right = removeLeafNodes(root.right,target);
+        if(root.val==target && root.left==null && root.right==null){
+        return null;
+    }
+
+    return root;
+    }
+
+    return null;
+
 }
-return root;
+
 }
-return null;
-}
-}
+
 problem 2673
 
 apporach:
