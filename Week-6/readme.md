@@ -16,7 +16,6 @@ return root;
 return null;
 }
 }
-
 problem 2673
 
 apporach:
@@ -25,11 +24,10 @@ We use DFS in postorder starting from the root (index 0). For each node, we recu
 code:
 class Solution {
 public int ans;
-`
-    public int minIncrements(int n, int[] cost) {
-        dfs(0, cost);
-        return ans;
-    }
+public int minIncrements(int n, int[] cost) {
+dfs(0, cost);
+return ans;
+}
 
     public int dfs(int i, int[] cost) {
         if (i >= cost.length)
